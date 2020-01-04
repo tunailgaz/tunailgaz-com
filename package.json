@@ -4,12 +4,13 @@
   "description": "https://www.tunailgaz.com",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && npm run cp-html && npm run css-build && npm run js-build",
-    "serve": "npm run build && http-server dist -c0 -g",
     "css-build": "node-sass --omit-source-map-url src/sass/style.scss dist/css/style.css",
     "js-build": "npx rollup -c",
-    "cp-html" : "mkdir dist && cp src/index.html dist/ && cp -R src/html dist/pages",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "html-build" : "mkdir dist && cp src/index.html dist/ && cp -R src/html dist/pages",
+
+    "build": "rm -rf dist && npm run html-build && npm run css-build && npm run js-build",
+    "serve": "npm run build && http-server dist -c0 -g",
+    "deploy": "npm run build && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "repository": {
     "type": "git",
