@@ -1,0 +1,94 @@
+%hover-style {
+  box-shadow: $box-shadow;
+  transition-property: box-shadow, transform;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(.16,1,.29,.99);
+  &hover {
+    box-shadow: $box-shadow;
+    transform: translate3d(0,-4px,0)
+  }
+}
+
+
+main {
+  min-height: 80vh;
+}
+.navbar-item {
+  .button {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+
+
+
+
+.animeted {
+  @extend %hover-style;
+}
+
+.tooltip.is-tooltip-multiline.is-tooltip-big::before {
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.element {
+  &.is-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.5;
+    &:after {
+      @include loader;
+      position: absolute;
+      top: calc(50% - 2.5em);
+      left: calc(50% - 2.5em);
+      width: 5em;
+      height: 5em;
+      border-width: 0.25em;
+    }
+  }
+}
+
+.small-text {
+  font-size: 13px;
+  line-height: 15px;
+  b {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.ellipsis-text-5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis-text-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis-text-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis-text-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis-text-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
