@@ -6,10 +6,10 @@ const pkg = require('./package.json');
 const version = pkg.version;
 
 export default {
-    input: ['client/chat.js'],
+    input: ['src/js/index.js'],
     output: {
         format: "amd",
-        dir: 'public/dist',
+        dir: 'dist/js',
         footer: `/* MAINTAINER Tuna Ilgaz <tunailgaz@gmail.com>. Build Version ${version} */`
     },
     plugins: [
@@ -21,7 +21,7 @@ export default {
             DEBUG : config.debug
         }),
         loadz0r({
-            publicPath: `${config.base_url}/public/dist`
+            publicPath: `${config.base_url}/dist`
         }),
         terser.terser()
     ],

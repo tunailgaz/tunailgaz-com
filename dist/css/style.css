@@ -7471,7 +7471,7 @@ img {
   font-weight: 500; }
 
 html {
-  background-color: #17181c; }
+  background-color: #101623; }
 
 body {
   color: #b5b5b5; }
@@ -10661,7 +10661,7 @@ a.list-item {
     background-color: #0a0a0a; }
 
 .modal-background {
-  background-color: #17181C; }
+  background-color: rgba(31, 61, 88, 0.96); }
 
 .modal-card-head,
 .modal-card-foot {
@@ -10681,7 +10681,7 @@ a.list-item {
   background-color: white; }
 
 .navbar {
-  background-color: #17181c; }
+  background-color: #101623; }
   .navbar.is-white {
     background-color: #e6e6e6;
     color: #0a0a0a; }
@@ -11515,7 +11515,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
 
 @media screen and (max-width: 899px) {
   .navbar-menu {
-    background-color: #17181c;
+    background-color: #101623;
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1); }
   .navbar.is-fixed-bottom-touch.has-shadow {
     box-shadow: 0 -2px 3px rgba(255, 255, 255, 0.1); } }
