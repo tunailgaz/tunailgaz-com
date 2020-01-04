@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css-build": "node-sass --omit-source-map-url src/sass/style.scss dist/css/style.css",
+    "css-build": "node-sass --omit-source-map-url src/sass/style.scss docs/css/style.css",
     "js-build": "npx rollup -c",
-    "cp-html" : "cp src/index.html dist/ && cp -r src/html dist/pages",
-    "build": "npm run css-build && npm run js-build && npm run html-build",
-    "serve": "http-server -c0 -g"
+    "cp-html" : "cp src/index.html docs/ && cp -r src/html docs/pages",
+    "build": "rm -rf docs && npm run css-build && npm run js-build && npm run cp-html",
+    "serve": "npm run build && http-server docs -c0 -g"
   },
   "repository": {
     "type": "git",
