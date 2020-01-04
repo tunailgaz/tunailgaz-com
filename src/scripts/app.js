@@ -1,2 +1,2 @@
 const testEl = document.querySelector('#test');
-testEl.innerHTML = 'inserted by js update 17';
+testEl.innerHTML = 'inserted by js update 18';
