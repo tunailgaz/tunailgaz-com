@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const testEl = document.querySelector('#test');
-    testEl.innerHTML = 'this inserted by js update4';
+    testEl.innerHTML = 'this inserted by js update5';
    /* alert('test');*/
 });
