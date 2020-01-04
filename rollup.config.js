@@ -6,7 +6,7 @@ const pkg = require('./package.json');
 const version = pkg.version;
 
 export default {
-    input: ['src/js/index.js'],
+    input: ['src/scripts/index.js'],
     output: {
         format: "amd",
         dir: 'dist/js',

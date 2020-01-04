@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "css-build": "node-sass --omit-source-map-url src/sass/style.scss dist/css/style.css",
     "js-build": "npx rollup -c",
-    "build": "npm run css-build && npm run js-build",
+    "cp-html" : "cp src/index.html dist/ && cp -r src/html dist/pages",
+    "build": "npm run css-build && npm run js-build && npm run html-build",
     "serve": "http-server -c0 -g"
   },
   "repository": {
