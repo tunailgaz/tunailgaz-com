@@ -21,7 +21,7 @@ export default {
             DEBUG : config.debug
         }),
         loadz0r({
-            publicPath: `${config.base_url}/dist`
+            publicPath: `${config.base_url}/js`
         }),
         terser.terser()
     ],
