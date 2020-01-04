@@ -8,7 +8,7 @@
     "js-build": "npx rollup -c",
     "html-build" : "mkdir dist && cp src/index.html dist/ && cp -R src/html dist/pages",
 
-    "build": "rm -rf dist && npm run html-build && npm run css-build && npm run js-build && git add .",
+    "build": "rm -rf dist && npm run html-build && npm run css-build && npm run js-build && cp src/CNAME dist/ git add .",
     "serve": "npm run build && http-server dist -c0 -g",
     "deploy": "npm run build && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
