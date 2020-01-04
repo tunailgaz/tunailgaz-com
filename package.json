@@ -8,7 +8,7 @@
     "js-build": "npx rollup -c",
     "html-build" : "mkdir dist && cp src/index.html dist/ && cp -R src/html dist/pages",
     "cp-cname" : "cp src/CNAME dist/",
-    "build": "rm -rf dist && npm run html-build && npm run css-build && npm run js-build && npm run cp-cname",
+    "build": "rm -rf dist && npm run html-build && npm run css-build && npm run js-build && npm run cp-cname && git commit -a",
     "serve": "npm run build && http-server dist -c0 -g",
     "deploy": "npm run build && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
     "deploy-fake": "npm run build && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git checkout gh-pages"
