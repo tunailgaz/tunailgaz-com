@@ -9,7 +9,7 @@ export default {
     input: ['src/scripts/index.js'],
     output: {
         format: "amd",
-        dir: 'docs/js',
+        dir: 'dist/js',
         footer: `/* MAINTAINER Tuna Ilgaz <tunailgaz@gmail.com>. Build Version ${version} */`
     },
     plugins: [
@@ -21,7 +21,7 @@ export default {
             DEBUG : config.debug
         }),
         loadz0r({
-            publicPath: `${config.base_url}/docs`
+            publicPath: `${config.base_url}/dist`
         }),
         terser.terser()
     ],
