@@ -1,7 +1,18 @@
-[_] start for UI, left/right --- left side top -> user card ==== right side top menu etc..
+[_] find a source for portfolio, cv pages
+[_] es6 modules and their imports, nodejs --experimental for es6 modules
+[_] change src folder a bit for dev prod. like put scripts on it then @build func create dist, also serve from src not dist, so you dont need to create all the time
+
+[_] first off all, think about what are you trying to do?
+    page for yourself?
+    showcase for other people?
+    start making some mockups..
+    after you decide choose your tools,
+    after that write steps to accomplish,
+    AFTER THAT START closing tasks
+[_] make a 2-3 years? maybe shorter term.. -> create a road map for life and its steps
+
 [_] create infrastructure;
     [_] categories
     [_] sub categories
         [_] resource pages, videos, images | ex: Chemistry -> Acids and Bases -> https://www.youtube.com/watch?v=LS67vS10O5Y&list=PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr&t=0s
 [_] create cv
-
