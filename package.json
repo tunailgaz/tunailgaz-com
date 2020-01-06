@@ -8,11 +8,12 @@
     "build:dev-sass": "node-sass --omit-source-map-url src/css/sass/style.scss src/css/style.css",
     "copy:html": "mkdir dist && cp src/index.html dist/ && cp -R src/pages dist/pages",
     "copy:cname": "cp src/CNAME dist/",
+    "copy:images": "cp -R src/images dist/",
     "css:watch": "npm run build:dev-sass && npm run build:dev-sass -- -w",
-    "build": "rm -rf dist && npm run copy:html && npm run build:sass && npm run copy:cname",
+    "build": "rm -rf dist && npm run copy:html && npm run build:sass && npm run copy:cname && npm run copy:images",
     "serve-src": "http-server src -c0 -g",
     "serve": "npm run build && http-server dist -c0 -g",
-    "deploy": "npm run build && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
+    "deploy": "git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "repository": {
     "type": "git",
