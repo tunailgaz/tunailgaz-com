@@ -9,8 +9,8 @@
     "copy:html": "mkdir dist && cp src/index.html dist/ && cp -R src/pages dist/pages",
     "copy:cname": "cp src/CNAME dist/",
     "css:watch": "npm run build:dev-sass && npm run build:dev-sass -- -w",
-    "serve-src": "http-server src -c0 -g",
     "build": "rm -rf dist && npm run copy:html && npm run build:sass && npm run copy:cname",
+    "serve-src": "http-server src -c0 -g",
     "serve": "npm run build && http-server dist -c0 -g",
     "deploy": "npm run build && git add . && git commit -a && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
