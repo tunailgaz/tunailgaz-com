@@ -1,4 +1,5 @@
-###Personal website 
+###Personal website
+ 
 ``
 @repo for my personal website 
 simple html/css -> `` [bulma](https://bulma.io/)
@@ -10,5 +11,7 @@ simple html/css -> `` [bulma](https://bulma.io/)
 - [ ] Add external resume [with this tool](https://jsonresume.org/)
 
 using [GithubPages](https://pages.github.com/) to serve
+ 
+dist -> @[gh branch](https://github.com/tunailgaz/tunailgaz-com/tree/gh-pages)
 
 
