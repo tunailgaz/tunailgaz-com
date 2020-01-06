@@ -12,7 +12,7 @@
     "build": "rm -rf dist && npm run copy:html && npm run build:sass && npm run copy:cname",
     "serve-src": "http-server src -c0 -g",
     "serve": "npm run build && http-server dist -c0 -g",
-    "deploy": "npm run build && git add . && git commit -a && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
+    "deploy": "npm run build && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "repository": {
     "type": "git",
