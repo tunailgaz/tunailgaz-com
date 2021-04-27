@@ -10,77 +10,18 @@
     <title>tunailgaz.com</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar is-primary" >
-            <div class="container">
-                <div class="navbar-brand">
-                    <a class="navbar-item is-active" href="/">Tuna Ilgaz</a>
-                    <div class="navbar-burger" data-target="navMenuMore">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div id="navMenuMore" class="navbar-menu">
-                    <div class="navbar-start ">
-                        <a href="#" class="navbar-item">
-                            About
-                        </a>
-                        <a href="#" class="navbar-item">
-                            Contact
-                        </a>
-                        <div class="navbar-item has-dropdown is-hoverable  ">
-                            <a class="navbar-link ">
-                                Resources
-                            </a>
-                            <div class="navbar-dropdown ">
-                                <a href="#" class="navbar-item">
-                                    My Development Environment
-                                </a>
-                                <a href="#" class="navbar-item">
-                                    Frequently Used Tools
-                                </a>
-                                <a href="#" class="navbar-item">
-                                    Downloads
-                                </a>
-                                <div class="navbar-divider"></div>
-                                <a target="_blank" href="https://tunailgaz.github.io/" class="navbar-item">
-                                    tunailgaz.github.io <br>  <!--<a href="">https://github.com/bretfisher/dockercon19</a>-->
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-                    if ($navbarBurgers.length > 0) {
-                        $navbarBurgers.forEach( el => {
-                            el.addEventListener('click', () => {
-                                const target = el.dataset.target;
-                                const $target = document.getElementById(target);
-                                el.classList.toggle('is-active');
-                                $target.classList.toggle('is-active');
-                            });
-                        });
-                    }
-                });
-            </script>
-        </nav>
-    </header>
     <div class="section">
         <div class="container">
 
-            <!-- top -->
             <div class="columns is-centered">
                 <div class="column is-narrow">
                     <article class="media">
-                        <figure class="media-left">
-                            <p class="image is-64x64 ">
+                        <div class="media-left">
+                            <figure class="image is-128x128 ">
                                 <img class="is-rounded" src="./images/image10.png" alt="avatar">
-                            </p>
-                        </figure>
+                            </figure>
+                        </div>
+
                         <div class="media-content">
                             <div class="content">
                                 <p class="title">Tuna Ilgaz</p>
@@ -103,21 +44,19 @@
                     </article>
                 </div>
                 <div class="column ">
-                    7+ years in IT.<br>DevOps, WebDev<br>Lover of Docker, JavaScript.<br>Designing, building and operating systems from top to bottom. <br>
-                    Big fan of GNU Project and supporter of free software, open source.
+                    8+ years in IT.<br>DevOps, WebDev<br>Enjoying <i>Docker</i> and <i>JavaScript</i>.<br>Designing, building and maintaining projects.<br>
+                    Supporter of free software & open source.
                     I basically spend my days learning, building and try to help others.
                     <br>
                     Competitive gamer.
                     <br>A people-person who finds himself in front of the computer way too often. I live at Izmir. Dogs over cats.
                 </div>
             </div>
-            <!-- top -->
         </div>
 
     </div>
     <div class="section">
         <div class="container">
-            <!-- work experience  -->
             <div class="columns is-multiline is-centered">
                 <div class="column is-3">
                     <span class="icon"><i class="fas fa-briefcase"></i></span> <strong>WORK EXPERIENCE</strong>
@@ -130,9 +69,9 @@
                             <p class="is-family-code">Web Developer</p>
                             <div class="content">
                                 <ul>
-                                    <li>Creating automated infrastructures</li>
-                                    <li>Working on socket communications</li>
-                                    <li>DevOps</li>
+                                    <li>Cryptocurrency Industry</li>
+                                    <li>Automated Infrastructures</li>
+                                    <li>WebDev, DevOps</li>
                                 </ul>
                             </div>
                         </div>
@@ -143,18 +82,18 @@
                             <div class="content">
                                 <ul>
                                     <li>Built large traffic websites</li>
-                                    <li>Built automated scripts</li>
-                                    <li>Designed and built architectures for large traffic websites</li>
+                                    <li>Web crawlers, scrapers, automations</li>
+                                    <li>Backend, DevOps</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="column is-full">
-                            <h3 class="subtitle"><strong> ICM Software</strong></h3>
+                            <h3 class="subtitle"><strong>ICM Software</strong></h3>
                             <p class="help is-italic has-text-grey">2013-01-01 - 2014-01-01</p>
                             <p class="is-family-code">Developer</p>
                             <div class="content">
                                 <ul>
-                                    <li>Worked on e-commerce websites for clients</li>
+                                    <li>Worked on e-commerce websites</li>
                                 </ul>
                             </div>
                         </div>
@@ -171,9 +110,7 @@
                     </div>
                 </div>
             </div>
-            <!-- work experience  -->
 
-            <!-- education  -->
             <div class="columns is-multiline is-centered">
                 <div class="column is-3">
                     <span class="icon"><i class="fas fa-graduation-cap"></i></span> <b>EDUCATION</b>
@@ -187,16 +124,13 @@
                             <p class="help is-italic has-text-grey">Bachelor degree in the Department of Computer Technology and Information Systems</p>
                             <div class="content">
                                 <ul>
-                                    <li>Algorithms and Data Structures</li>
                                     <li>Principles of Software Engineering</li>
-                                    <li>Database Management Systems and Applications, Administration</li>
                                     <li>Linux System Administration</li>
-                                    <li>Computer Networks</li>
-                                    <li>Computer Algorithms and Network Security</li>
-                                    <li>Web Technologies</li>
-                                    <li>Information Systems Project Management</li>
+                                    <li>Database Management Systems and Applications, Administration</li>
                                     <li>Data Analysis</li>
-                                    <li>Marketing Principles</li>
+                                    <li>Algorithms and Data Structures</li>
+                                    <li>Information Systems Project Management</li>
+                                    <li>Web Technologies</li>
                                     <li>Software Validation Verification and Testing</li>
                                 </ul>
                             </div>
@@ -204,9 +138,7 @@
                     </div>
                 </div>
             </div>
-            <!-- education  -->
 
-            <!--Skills  -->
             <div class="columns is-multiline is-centered">
                 <div class="column is-3">
                     <span class="icon"><i class="fas fa-tools"></i></span> <b>SKILLS</b>
@@ -220,33 +152,30 @@
                                 <p class="help is-italic has-text-grey">Level: Expert I hope..</p>
                                 <ul>
                                     <li>Docker</li>
-                                    <li>Docker Swarm</li>
                                     <li>Git</li>
-                                    <li>JavaScript</li>
                                     <li>Node.js</li>
-                                    <li>HTML</li>
                                     <li>Redis</li>
                                     <li>MySQL</li>
+                                    <li>RabbitMQ</li>
+                                    <li>JavaScript</li>
+                                    <li>Crawlers, Scrapers, Puppeteer</li>
                                 </ul>
                             </div>
                             <div class="content">
                                 <p class="help is-italic has-text-grey">Level: Good</p>
                                 <ul>
                                     <li>Linux</li>
-                                    <li>RabbitMQ, Kafka</li>
+                                    <li>Kafka</li>
                                     <li>PHP, Codeigniter</li>
-                                    <li>CSS</li>
-                                    <li>Shell Scripting</li>
-                                    <li>Grunt, Gulp</li>
+                                    <li>HTML/CSS</li>
+                                    <li>Scripting</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Skills  -->
 
-            <!-- awards  -->
             <div class="columns is-multiline is-centered">
                 <div class="column is-3">
                     <span class="icon"><i class="fas fa-trophy"></i></span> <b>AWARDS</b>
@@ -279,12 +208,12 @@
                     </div>
                 </div>
             </div>
-            <!-- awards  -->
         </div>
 
     </div>
 
-    <footer class="footer">
+    <hr>
+    <footer>
         <div class="container  ">
             <div class="columns">
                 <div class="column is-narrow">
@@ -337,12 +266,12 @@
                                 <a class="is-link has-text-weight-bold is-italic" href="https://github.com/tunailgaz/tunailgaz-com" target="_blank">repo</a>
                             </p>
                             <p class="help is-info is-italic">
-                                last update 2020-01-07
+                                last update 2021-04-27
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="column has-text-centered">
+                <div class="column is-half has-text-centered">
                     <p class="help">
                         Tuna "Memphis" Ilgaz
                     </p>
