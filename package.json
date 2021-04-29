@@ -6,12 +6,14 @@
   "scripts": {
     "build:sass": "node-sass --omit-source-map-url src/css/sass/style.scss dist/css/style.css",
     "build:dev-sass": "node-sass --omit-source-map-url src/css/sass/style.scss src/css/style.css",
-    "copy:html": "mkdir dist && cp src/index.html dist/ && cp -R src/pages dist/pages",
+    "copy:html": "cp -R src/*.html dist/ ",
     "copy:cname": "cp src/CNAME dist/",
     "copy:images": "cp -R src/images dist/",
+    "copy:ethers": "cp node_modules/ethers/dist/ethers.umd.min.js dist/js/ethers.js",
+    "copy:js": "cp -R src/js dist/",
     "css:watch": "npm run build:dev-sass && npm run build:dev-sass -- -w",
-    "build": "rm -rf dist && npm run copy:html && npm run build:sass && npm run copy:cname && npm run copy:images",
-    "serve-src": "http-server src -c0 -g",
+    "build": "rm -rf dist && mkdirp dist && npm run copy:html && npm run build:sass && npm run copy:cname && npm run copy:images && npm run copy:js && npm run copy:ethers",
+    "serve-src": "cp node_modules/ethers/dist/ethers.umd.min.js  src/js/ethers.js &&  http-server src -c0 -g",
     "serve": "npm run build && http-server dist -c0 -g",
     "deploy": "git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
     "deploy-q": "git subtree push --prefix dist origin gh-pages"
@@ -30,5 +32,8 @@
     "bulma": "^0.8.0",
     "http-server": "^0.12.3",
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "ethers": "^5.1.4"
   }
 }
