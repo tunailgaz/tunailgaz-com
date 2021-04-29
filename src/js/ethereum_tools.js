@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       if(this.clear){
         this.clear.addEventListener('click',()=> {
           this.form?.reset()
+          this.generate_btn.focus()
         })
       }
     }
@@ -111,7 +112,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let apply_times = parseInt(this.times.value)
         let private_key = ethers.utils.id(repeated_password);
 
-        for(let i=0; i<apply_times; i++){
+        for(let i=1; i<apply_times; i++){
           private_key = ethers.utils.id(private_key)
         }
         return private_key;
