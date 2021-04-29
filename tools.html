@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/ethereum_tools.js"></script>
+<script defer src="js/ethers.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+<head>
+    <title>tunailgaz.com - Ethereum Tools</title>
+</head>
+<body>
+<header>
+    <nav class="navbar is-primary" >
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item " href="index.html">Home</a>
+                <div class="navbar-burger" data-target="navMenuMore">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="navMenuMore" class="navbar-menu">
+                <div class="navbar-start ">
+                    <a href="tools.html" class="navbar-item is-active">
+                        Tools
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+              $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+                  const target = el.dataset.target;
+                  const $target = document.getElementById(target);
+                  el.classList.toggle('is-active');
+                  $target.classList.toggle('is-active');
+                });
+              });
+            }
+          });
+        </script>
+    </nav>
+</header>
+<div class="section">
+    <div class="container">
+
+        <div class="columns is-centered is-multiline">
+            <div class="column is-full" id="keygen_box">
+
+                <div class="box">
+                    <form id="form">
+
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <p class="subtitle">Ethereum - Custom Private Key Generator  </p>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <div class="field">
+                                    <div class="control">
+                                        <p class="is-info help is-pulled-right">requires("<a target="_blank" href="https://github.com/ethers-io/ethers.js">ethers</a>"); v5.1.4</p>
+                                    </div>
+                                    <div class="control">
+                                        <a target="_blank" href="js/ethereum_tools.js">Source Code</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </nav>
+
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Password</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" id="password" required placeholder="Type Password here..">
+                                </div>
+                                <p class="is-info is-italic help">.trim() will be applied</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Repeat</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" id="repeat" required value="1" max="99999" min="1"  type="number">
+                                </div>
+                                <p class="is-info is-italic help">Repeats password X number of times - Between 1 - 99999</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Times</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" id="times" required value="0" max="999999999" min="0"  type="number">
+                                </div>
+                                <p class="is-info is-italic help">Applies Ethereum Identity function computes the KECCAK256 hash of the text bytes to repeated password X number of times</p>
+                                <p class="is-info is-italic help">Between 0 - 999999999</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label"></label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button type="submit" id="generate" class="button is-primary is-small">Generate</button>
+                                </div>
+                                <div class="control">
+                                    <button id="clear" class="button is-primary is-small">Clear</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr>
+<footer>
+    <div class="container  ">
+        <div class="columns">
+            <div class="column is-narrow">
+                <div class="field">
+                    <div class="control">
+                        <ul>
+                            <li>
+                                <p class="control">
+                                    <a target="_blank" href="https://pages.github.com/">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                        <span>
+                                    Git Pages
+                                    </span>
+                                    </a>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="control">
+                                    <a target="_blank" href="https://fontawesome.com/">
+                                    <span class="icon">
+                                        <i class="fab fa-font-awesome"></i>
+                                    </span>
+                                        <span>
+                                    FontAwesome
+                                    </span>
+                                    </a>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="control">
+                                    <a target="_blank" href="https://bulma.io/">
+                                    <span class="icon">
+                                        <i class="fa fa-code"></i>
+                                    </span>
+                                        <span>
+                                    Bulma
+                                    </span>
+                                    </a>
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <p class="help is-info">
+                            <a class="is-link has-text-weight-bold is-italic" href="https://github.com/tunailgaz/tunailgaz-com" target="_blank">repo</a>
+                        </p>
+                        <p class="help is-info is-italic">
+                            last update 2021-04-27
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-half has-text-centered">
+                <p class="help">
+                    Tuna "Memphis" Ilgaz
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
