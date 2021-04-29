@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       try {
         let private_key = this.generate_private_key();
         if(private_key){
-          let wallet = new ethers.Wallet(this.generate_private_key())
+          let wallet = new ethers.Wallet(private_key)
           this.create_wallet_element(wallet);
         }
       }catch (error){
