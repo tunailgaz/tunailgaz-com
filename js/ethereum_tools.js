@@ -40,9 +40,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     <label class="label">Public Address:</label>
                 </div>
                 <div class="field-body">
-                    <div class="field">
-                        <div class="control">
-                             <input class="input" value="${wallet.address}">
+                    <div class="field is-grouped ">
+                        <div class="control is-expanded">
+                             <input class="input"  value="${wallet.address}">
+                        </div>
+                        <div class="control" style="padding-top: 8px">
+                                <span class="icon is-small"><i class="fas fa-link"></i></span>
+                                <a target="_blank" href="https://etherscan.io/address/${wallet.address}">Check Balance</a>
                         </div>
                     </div>
                 </div>
